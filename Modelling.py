@@ -19,7 +19,7 @@ def train_test_split(dataframe,Date_column,forecasted_steps):
     dataframe = dataframe.sort_values(by=Date_column)
     tab1, tab2 = st.columns(2)
     with tab1:
-        st.info(f"Availabel Sales data is from {dataframe[Date_column].min()} ------ To ------ {dataframe[Date_column].max()}")
+        st.info(f"Available Sales data is from {dataframe[Date_column].min()} ------ To ------ {dataframe[Date_column].max()}")
 
     with tab2:
         forecasted_data = pd.DataFrame(pd.date_range(dataframe[Date_column].max(), periods=forecasted_steps+1, freq='W-MON')).rename_axis(['week']).reset_index(drop=True)
