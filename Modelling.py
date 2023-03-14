@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from matplotlib import pyplot as plt
 from plotly.subplots import make_subplots
-from sklearn.metrics import mean_absolute_error
+
 from prophet import Prophet
 
 import numpy as np
